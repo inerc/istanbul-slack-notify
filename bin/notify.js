@@ -8,7 +8,7 @@ const fs = require("fs");
 
 // Runs Coverage Notifier
 const settings = {
-    useTextNotify: !process.env.SLACK_WEBHOOK,
+    useTextNotify: false,
     istanbul: {
         rootDir: process.env.PWD,
         coverageFiles: ["coverage/coverage-final.json"],
@@ -16,7 +16,7 @@ const settings = {
         threshold: 100
     },
     slack: {
-        webhook: process.env.SLACK_WEBHOOK
+        webhook: 'https://hooks.slack.com/services/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'
     },
     project: {
         projectName: process.env.npm_package_name
